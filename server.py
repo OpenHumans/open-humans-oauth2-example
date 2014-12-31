@@ -27,12 +27,12 @@ open_humans = oauth.remote_app(
     'open-humans',
     consumer_key=OPEN_HUMANS_KEY,
     consumer_secret=OPEN_HUMANS_SECRET,
-    request_token_params={'scope': 'read+write'},
+    request_token_params={'scope': 'read write pgp'},
     base_url=OPEN_HUMANS_BASE_URL + '/api/',
     request_token_url=None,
     access_token_method='POST',
-    access_token_url=OPEN_HUMANS_BASE_URL + '/oauth2/access_token',
-    authorize_url=OPEN_HUMANS_BASE_URL + '/oauth2/authorize'
+    access_token_url=OPEN_HUMANS_BASE_URL + '/oauth2/token/',
+    authorize_url=OPEN_HUMANS_BASE_URL + '/oauth2/authorize/'
 )
 
 
