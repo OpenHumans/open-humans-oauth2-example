@@ -40,9 +40,9 @@ open_humans = oauth.remote_app(
 def index():
     if 'open_humans_token' in session:
         # Once you have the token you can GET and POST to the API
-        profile = open_humans.get('profile/current/')
+        member = open_humans.get('member/current/')
 
-        return jsonify(profile.data)
+        return jsonify(member.data)
 
     return redirect(url_for('login'))
 
